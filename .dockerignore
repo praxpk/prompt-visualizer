@@ -1,0 +1,15 @@
+.git
+.gitignore
+node_modules
+**/node_modules
+**/.next
+**/out
+**/.venv
+__pycache__
+*.pyc
+logs
+backend/logs
+*.DS_Store
+Thumbs.db
+*.env
+backend/.env

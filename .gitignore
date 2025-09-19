@@ -11,3 +11,14 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+ 
+# Logs
+logs/
+backend/logs/
+
+# Env files
+.env
+backend/.env
+
+# parquet
+**/*.parquet
