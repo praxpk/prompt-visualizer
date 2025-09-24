@@ -30,7 +30,7 @@ services:
       - NEXT_TELEMETRY_DISABLED=1
     volumes:
       - ./frontend:/app
-    command: sh -lc "npm run dev -- -p 3000 -H 0.0.0.0"
+    command: sh -lc "if [ ! -f node_modules/next/package.json ]; then echo 'Installing frontend dependencies...'; rm -rf node_modules; mkdir -p node_modules; cp -r /opt/frontend/node_modules/. node_modules/; fi; npm run dev -- -p 3000 -H 0.0.0.0"
 
   ollama:
     image: ollama/ollama:latest
@@ -53,3 +53,4 @@ services:
 
 volumes:
   ollama_models:
+
